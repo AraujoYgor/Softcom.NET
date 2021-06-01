@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TrilhadeDesenvolvimento.NET.Model;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
@@ -131,6 +125,18 @@ namespace TrilhadeDesenvolvimento.NET.Views
                 MessageBox.Show("Dados não Inseridos\n\n" + ex.Message);
                 
             }
+        }
+
+        private void tbCep_Leave(object sender, EventArgs e)
+        {
+            var vJson = Uteis.BuscarJsonCEP(tbCep.Text);
+            CEP.Unit Cep = new CEP.Unit();
+            Cep = CEP.DesSerializedClassUnit(vJson);
+            tbRua.Text = Cep.logradouro;
+            tbBairro.Text = Cep.bairro;
+            tbCidade.Text = Cep.localidade;
+            tbUF.Text = Cep.uf;
+            tbNumero.Focus();
         }
     }
 }

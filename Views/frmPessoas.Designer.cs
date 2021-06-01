@@ -371,6 +371,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbCep.Name = "tbCep";
             this.tbCep.Size = new System.Drawing.Size(154, 26);
             this.tbCep.TabIndex = 8;
+            this.tbCep.Leave += new System.EventHandler(this.tbCep_Leave);
             // 
             // label15
             // 
