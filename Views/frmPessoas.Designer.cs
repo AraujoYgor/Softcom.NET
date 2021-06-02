@@ -67,49 +67,56 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbCep = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
+            this.btnPesquisarCep = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbCodigo
             // 
+            this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodigo.Location = new System.Drawing.Point(26, 44);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.ReadOnly = true;
-            this.tbCodigo.Size = new System.Drawing.Size(272, 26);
+            this.tbCodigo.Size = new System.Drawing.Size(86, 22);
             this.tbCodigo.TabIndex = 0;
             this.tbCodigo.TabStop = false;
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(26, 122);
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNome.Location = new System.Drawing.Point(118, 44);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(272, 26);
+            this.tbNome.Size = new System.Drawing.Size(180, 22);
             this.tbNome.TabIndex = 1;
             // 
             // tbSobrenome
             // 
-            this.tbSobrenome.Location = new System.Drawing.Point(26, 204);
+            this.tbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSobrenome.Location = new System.Drawing.Point(26, 122);
             this.tbSobrenome.Name = "tbSobrenome";
-            this.tbSobrenome.Size = new System.Drawing.Size(272, 26);
+            this.tbSobrenome.Size = new System.Drawing.Size(272, 22);
             this.tbSobrenome.TabIndex = 2;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(26, 294);
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.Location = new System.Drawing.Point(26, 204);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(174, 26);
+            this.tbEmail.Size = new System.Drawing.Size(272, 22);
             this.tbEmail.TabIndex = 3;
             // 
             // tbCPF
             // 
-            this.tbCPF.Location = new System.Drawing.Point(207, 294);
+            this.tbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCPF.Location = new System.Drawing.Point(26, 294);
             this.tbCPF.Name = "tbCPF";
-            this.tbCPF.Size = new System.Drawing.Size(91, 26);
+            this.tbCPF.Size = new System.Drawing.Size(144, 22);
             this.tbCPF.TabIndex = 4;
             // 
             // tbCategoria
             // 
+            this.tbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCategoria.FormattingEnabled = true;
             this.tbCategoria.Items.AddRange(new object[] {
             "ADVOGADO",
@@ -117,60 +124,67 @@ namespace TrilhadeDesenvolvimento.NET.Views
             "VENDEDOR"});
             this.tbCategoria.Location = new System.Drawing.Point(26, 376);
             this.tbCategoria.Name = "tbCategoria";
-            this.tbCategoria.Size = new System.Drawing.Size(150, 28);
+            this.tbCategoria.Size = new System.Drawing.Size(144, 24);
             this.tbCategoria.TabIndex = 5;
             // 
             // tbSexo
             // 
+            this.tbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSexo.FormattingEnabled = true;
             this.tbSexo.Items.AddRange(new object[] {
             "MASCULINO",
             "FEMININO"});
-            this.tbSexo.Location = new System.Drawing.Point(182, 376);
+            this.tbSexo.Location = new System.Drawing.Point(176, 376);
             this.tbSexo.Name = "tbSexo";
-            this.tbSexo.Size = new System.Drawing.Size(116, 28);
+            this.tbSexo.Size = new System.Drawing.Size(122, 24);
             this.tbSexo.TabIndex = 6;
             // 
             // tbSalarioBase
             // 
-            this.tbSalarioBase.Location = new System.Drawing.Point(325, 44);
+            this.tbSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSalarioBase.Location = new System.Drawing.Point(176, 294);
             this.tbSalarioBase.Name = "tbSalarioBase";
-            this.tbSalarioBase.Size = new System.Drawing.Size(100, 26);
+            this.tbSalarioBase.Size = new System.Drawing.Size(122, 22);
             this.tbSalarioBase.TabIndex = 7;
             // 
             // tbRua
             // 
+            this.tbRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRua.Location = new System.Drawing.Point(325, 122);
             this.tbRua.Name = "tbRua";
-            this.tbRua.Size = new System.Drawing.Size(216, 26);
+            this.tbRua.Size = new System.Drawing.Size(272, 22);
             this.tbRua.TabIndex = 9;
             // 
             // tbNumero
             // 
-            this.tbNumero.Location = new System.Drawing.Point(547, 122);
+            this.tbNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumero.Location = new System.Drawing.Point(326, 204);
             this.tbNumero.Name = "tbNumero";
-            this.tbNumero.Size = new System.Drawing.Size(50, 26);
+            this.tbNumero.Size = new System.Drawing.Size(50, 22);
             this.tbNumero.TabIndex = 10;
             // 
             // tbBairro
             // 
+            this.tbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbBairro.Location = new System.Drawing.Point(325, 294);
             this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(216, 26);
+            this.tbBairro.Size = new System.Drawing.Size(216, 22);
             this.tbBairro.TabIndex = 12;
             // 
             // tbUF
             // 
+            this.tbUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUF.Location = new System.Drawing.Point(547, 294);
             this.tbUF.Name = "tbUF";
-            this.tbUF.Size = new System.Drawing.Size(50, 26);
+            this.tbUF.Size = new System.Drawing.Size(50, 22);
             this.tbUF.TabIndex = 13;
             // 
             // tbCidade
             // 
+            this.tbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCidade.Location = new System.Drawing.Point(325, 378);
             this.tbCidade.Name = "tbCidade";
-            this.tbCidade.Size = new System.Drawing.Size(196, 26);
+            this.tbCidade.Size = new System.Drawing.Size(196, 22);
             this.tbCidade.TabIndex = 14;
             // 
             // cbFilho
@@ -185,9 +199,10 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // 
             // tbPontodeReferencia
             // 
-            this.tbPontodeReferencia.Location = new System.Drawing.Point(325, 204);
+            this.tbPontodeReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPontodeReferencia.Location = new System.Drawing.Point(382, 204);
             this.tbPontodeReferencia.Name = "tbPontodeReferencia";
-            this.tbPontodeReferencia.Size = new System.Drawing.Size(272, 26);
+            this.tbPontodeReferencia.Size = new System.Drawing.Size(215, 22);
             this.tbPontodeReferencia.TabIndex = 11;
             // 
             // label1
@@ -202,7 +217,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 87);
+            this.label2.Location = new System.Drawing.Point(128, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 16;
@@ -211,7 +226,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 174);
+            this.label3.Location = new System.Drawing.Point(30, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 17;
@@ -220,7 +235,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 261);
+            this.label4.Location = new System.Drawing.Point(26, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 18;
@@ -229,7 +244,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(207, 265);
+            this.label5.Location = new System.Drawing.Point(30, 265);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 19;
@@ -256,7 +271,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(322, 13);
+            this.label8.Location = new System.Drawing.Point(178, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 20);
             this.label8.TabIndex = 22;
@@ -265,7 +280,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(322, 87);
+            this.label9.Location = new System.Drawing.Point(333, 87);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 20);
             this.label9.TabIndex = 23;
@@ -274,7 +289,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(547, 99);
+            this.label10.Location = new System.Drawing.Point(333, 174);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 20);
             this.label10.TabIndex = 24;
@@ -283,7 +298,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(321, 174);
+            this.label11.Location = new System.Drawing.Point(382, 174);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(159, 20);
             this.label11.TabIndex = 25;
@@ -292,7 +307,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(321, 265);
+            this.label12.Location = new System.Drawing.Point(333, 265);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 20);
             this.label12.TabIndex = 26;
@@ -310,7 +325,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(322, 343);
+            this.label14.Location = new System.Drawing.Point(333, 343);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(63, 20);
             this.label14.TabIndex = 28;
@@ -367,16 +382,16 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // 
             // tbCep
             // 
-            this.tbCep.Location = new System.Drawing.Point(443, 44);
+            this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCep.Location = new System.Drawing.Point(325, 44);
             this.tbCep.Name = "tbCep";
-            this.tbCep.Size = new System.Drawing.Size(154, 26);
+            this.tbCep.Size = new System.Drawing.Size(124, 22);
             this.tbCep.TabIndex = 8;
-            this.tbCep.Leave += new System.EventHandler(this.tbCep_Leave);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(449, 13);
+            this.label15.Location = new System.Drawing.Point(333, 13);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(45, 20);
             this.label15.TabIndex = 34;
@@ -386,12 +401,25 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // 
             this.ofdFoto.Filter = "JPG|*.jpg|400x400pixels|*.*|PNG|*.png|400x400pixels|*.*";
             // 
+            // btnPesquisarCep
+            // 
+            this.btnPesquisarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarCep.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnPesquisarCep.Location = new System.Drawing.Point(455, 42);
+            this.btnPesquisarCep.Name = "btnPesquisarCep";
+            this.btnPesquisarCep.Size = new System.Drawing.Size(142, 23);
+            this.btnPesquisarCep.TabIndex = 35;
+            this.btnPesquisarCep.Text = "Pesquisar Cep";
+            this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
+            // 
             // frmPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(847, 487);
+            this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tbCep);
             this.Controls.Add(this.panel1);
@@ -481,5 +509,6 @@ namespace TrilhadeDesenvolvimento.NET.Views
         public System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.OpenFileDialog ofdFoto;
+        private System.Windows.Forms.Button btnPesquisarCep;
     }
 }

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 using TrilhadeDesenvolvimento.NET.Controler;
+using Microsoft.VisualBasic;
 
 namespace TrilhadeDesenvolvimento.NET.Views
 {
@@ -126,17 +127,26 @@ namespace TrilhadeDesenvolvimento.NET.Views
                 
             }
         }
-
-        private void tbCep_Leave(object sender, EventArgs e)
+        private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
-            var vJson = Uteis.BuscarJsonCEP(tbCep.Text);
-            CEP.Unit Cep = new CEP.Unit();
-            Cep = CEP.DesSerializedClassUnit(vJson);
-            tbRua.Text = Cep.logradouro;
-            tbBairro.Text = Cep.bairro;
-            tbCidade.Text = Cep.localidade;
-            tbUF.Text = Cep.uf;
-            tbNumero.Focus();
+            string vCep = tbCep.Text;
+            if(vCep != null)
+            {
+                if(vCep.Length == 8)
+                {
+                    if(Information.IsNumeric(vCep))
+                    {
+                        var vJson = Uteis.BuscarJsonCEP(vCep);
+                        CEP.Unit Cep = new CEP.Unit();
+                        Cep = CEP.DesSerializedClassUnit(vJson);
+                        tbRua.Text = Cep.logradouro;
+                        tbBairro.Text = Cep.bairro;
+                        tbCidade.Text = Cep.localidade;
+                        tbUF.Text = Cep.uf;
+                        tbNumero.Focus();
+                    }
+                }
+            }
         }
     }
 }
