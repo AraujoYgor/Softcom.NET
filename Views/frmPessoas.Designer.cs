@@ -62,14 +62,17 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.tbnSelecionaFoto = new System.Windows.Forms.Button();
             this.btnLimparFoto = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbBotoes = new System.Windows.Forms.Panel();
+            this.btnFilhos = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.tbCep = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pbBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbCodigo
@@ -78,14 +81,14 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbCodigo.Location = new System.Drawing.Point(26, 44);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.ReadOnly = true;
-            this.tbCodigo.Size = new System.Drawing.Size(86, 22);
+            this.tbCodigo.Size = new System.Drawing.Size(63, 22);
             this.tbCodigo.TabIndex = 0;
             this.tbCodigo.TabStop = false;
             // 
             // tbNome
             // 
             this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNome.Location = new System.Drawing.Point(118, 44);
+            this.tbNome.Location = new System.Drawing.Point(95, 44);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(180, 22);
             this.tbNome.TabIndex = 1;
@@ -95,7 +98,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSobrenome.Location = new System.Drawing.Point(26, 122);
             this.tbSobrenome.Name = "tbSobrenome";
-            this.tbSobrenome.Size = new System.Drawing.Size(272, 22);
+            this.tbSobrenome.Size = new System.Drawing.Size(249, 22);
             this.tbSobrenome.TabIndex = 2;
             // 
             // tbEmail
@@ -103,7 +106,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(26, 204);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(272, 22);
+            this.tbEmail.Size = new System.Drawing.Size(249, 22);
             this.tbEmail.TabIndex = 3;
             // 
             // tbCPF
@@ -111,7 +114,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCPF.Location = new System.Drawing.Point(26, 294);
             this.tbCPF.Name = "tbCPF";
-            this.tbCPF.Size = new System.Drawing.Size(144, 22);
+            this.tbCPF.Size = new System.Drawing.Size(113, 22);
             this.tbCPF.TabIndex = 4;
             // 
             // tbCategoria
@@ -124,7 +127,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             "VENDEDOR"});
             this.tbCategoria.Location = new System.Drawing.Point(26, 376);
             this.tbCategoria.Name = "tbCategoria";
-            this.tbCategoria.Size = new System.Drawing.Size(144, 24);
+            this.tbCategoria.Size = new System.Drawing.Size(121, 24);
             this.tbCategoria.TabIndex = 5;
             // 
             // tbSexo
@@ -134,7 +137,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbSexo.Items.AddRange(new object[] {
             "MASCULINO",
             "FEMININO"});
-            this.tbSexo.Location = new System.Drawing.Point(176, 376);
+            this.tbSexo.Location = new System.Drawing.Point(153, 376);
             this.tbSexo.Name = "tbSexo";
             this.tbSexo.Size = new System.Drawing.Size(122, 24);
             this.tbSexo.TabIndex = 6;
@@ -142,9 +145,9 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // tbSalarioBase
             // 
             this.tbSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSalarioBase.Location = new System.Drawing.Point(176, 294);
+            this.tbSalarioBase.Location = new System.Drawing.Point(145, 294);
             this.tbSalarioBase.Name = "tbSalarioBase";
-            this.tbSalarioBase.Size = new System.Drawing.Size(122, 22);
+            this.tbSalarioBase.Size = new System.Drawing.Size(130, 22);
             this.tbSalarioBase.TabIndex = 7;
             // 
             // tbRua
@@ -152,7 +155,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRua.Location = new System.Drawing.Point(325, 122);
             this.tbRua.Name = "tbRua";
-            this.tbRua.Size = new System.Drawing.Size(272, 22);
+            this.tbRua.Size = new System.Drawing.Size(216, 22);
             this.tbRua.TabIndex = 9;
             // 
             // tbNumero
@@ -168,15 +171,15 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbBairro.Location = new System.Drawing.Point(325, 294);
             this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(216, 22);
+            this.tbBairro.Size = new System.Drawing.Size(156, 22);
             this.tbBairro.TabIndex = 12;
             // 
             // tbUF
             // 
             this.tbUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUF.Location = new System.Drawing.Point(547, 294);
+            this.tbUF.Location = new System.Drawing.Point(487, 294);
             this.tbUF.Name = "tbUF";
-            this.tbUF.Size = new System.Drawing.Size(50, 22);
+            this.tbUF.Size = new System.Drawing.Size(54, 22);
             this.tbUF.TabIndex = 13;
             // 
             // tbCidade
@@ -184,25 +187,26 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCidade.Location = new System.Drawing.Point(325, 378);
             this.tbCidade.Name = "tbCidade";
-            this.tbCidade.Size = new System.Drawing.Size(196, 22);
+            this.tbCidade.Size = new System.Drawing.Size(156, 22);
             this.tbCidade.TabIndex = 14;
             // 
             // cbFilho
             // 
             this.cbFilho.AutoSize = true;
-            this.cbFilho.Location = new System.Drawing.Point(527, 378);
+            this.cbFilho.Location = new System.Drawing.Point(487, 375);
             this.cbFilho.Name = "cbFilho";
             this.cbFilho.Size = new System.Drawing.Size(70, 24);
             this.cbFilho.TabIndex = 15;
             this.cbFilho.Text = "Filhos";
             this.cbFilho.UseVisualStyleBackColor = true;
+            this.cbFilho.CheckedChanged += new System.EventHandler(this.cbFilho_CheckedChanged);
             // 
             // tbPontodeReferencia
             // 
             this.tbPontodeReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPontodeReferencia.Location = new System.Drawing.Point(382, 204);
             this.tbPontodeReferencia.Name = "tbPontodeReferencia";
-            this.tbPontodeReferencia.Size = new System.Drawing.Size(215, 22);
+            this.tbPontodeReferencia.Size = new System.Drawing.Size(159, 22);
             this.tbPontodeReferencia.TabIndex = 11;
             // 
             // label1
@@ -262,7 +266,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(178, 343);
+            this.label7.Location = new System.Drawing.Point(149, 343);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 20);
             this.label7.TabIndex = 21;
@@ -271,7 +275,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(178, 265);
+            this.label8.Location = new System.Drawing.Point(141, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(103, 20);
             this.label8.TabIndex = 22;
@@ -316,7 +320,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(547, 265);
+            this.label13.Location = new System.Drawing.Point(490, 265);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(31, 20);
             this.label13.TabIndex = 27;
@@ -334,7 +338,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // pbFoto
             // 
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoto.Location = new System.Drawing.Point(627, 44);
+            this.pbFoto.Location = new System.Drawing.Point(558, 44);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(197, 276);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,7 +347,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // 
             // tbnSelecionaFoto
             // 
-            this.tbnSelecionaFoto.Location = new System.Drawing.Point(647, 336);
+            this.tbnSelecionaFoto.Location = new System.Drawing.Point(585, 340);
             this.tbnSelecionaFoto.Name = "tbnSelecionaFoto";
             this.tbnSelecionaFoto.Size = new System.Drawing.Size(143, 27);
             this.tbnSelecionaFoto.TabIndex = 16;
@@ -353,7 +357,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // 
             // btnLimparFoto
             // 
-            this.btnLimparFoto.Location = new System.Drawing.Point(647, 376);
+            this.btnLimparFoto.Location = new System.Drawing.Point(585, 375);
             this.btnLimparFoto.Name = "btnLimparFoto";
             this.btnLimparFoto.Size = new System.Drawing.Size(143, 26);
             this.btnLimparFoto.TabIndex = 31;
@@ -361,20 +365,34 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.btnLimparFoto.Text = "Limpar Foto";
             this.btnLimparFoto.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // pbBotoes
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.btnSalvar);
-            this.panel1.Location = new System.Drawing.Point(0, 424);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(886, 63);
-            this.panel1.TabIndex = 32;
+            this.pbBotoes.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbBotoes.Controls.Add(this.btnSair);
+            this.pbBotoes.Controls.Add(this.btnNovo);
+            this.pbBotoes.Controls.Add(this.btnFilhos);
+            this.pbBotoes.Controls.Add(this.btnSalvar);
+            this.pbBotoes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pbBotoes.Location = new System.Drawing.Point(0, 428);
+            this.pbBotoes.Name = "pbBotoes";
+            this.pbBotoes.Size = new System.Drawing.Size(767, 63);
+            this.pbBotoes.TabIndex = 32;
+            // 
+            // btnFilhos
+            // 
+            this.btnFilhos.Location = new System.Drawing.Point(398, 10);
+            this.btnFilhos.Name = "btnFilhos";
+            this.btnFilhos.Size = new System.Drawing.Size(159, 41);
+            this.btnFilhos.TabIndex = 18;
+            this.btnFilhos.Text = "FILHOS";
+            this.btnFilhos.UseVisualStyleBackColor = true;
+            this.btnFilhos.Click += new System.EventHandler(this.btnFilhos_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(393, 10);
+            this.btnSalvar.Location = new System.Drawing.Point(216, 10);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(159, 41);
+            this.btnSalvar.Size = new System.Drawing.Size(160, 41);
             this.btnSalvar.TabIndex = 17;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -385,7 +403,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.tbCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCep.Location = new System.Drawing.Point(325, 44);
             this.tbCep.Name = "tbCep";
-            this.tbCep.Size = new System.Drawing.Size(124, 22);
+            this.tbCep.Size = new System.Drawing.Size(107, 22);
             this.tbCep.TabIndex = 8;
             // 
             // label15
@@ -405,24 +423,44 @@ namespace TrilhadeDesenvolvimento.NET.Views
             // 
             this.btnPesquisarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarCep.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnPesquisarCep.Location = new System.Drawing.Point(455, 42);
+            this.btnPesquisarCep.Location = new System.Drawing.Point(438, 43);
             this.btnPesquisarCep.Name = "btnPesquisarCep";
-            this.btnPesquisarCep.Size = new System.Drawing.Size(142, 23);
+            this.btnPesquisarCep.Size = new System.Drawing.Size(103, 23);
             this.btnPesquisarCep.TabIndex = 35;
             this.btnPesquisarCep.Text = "Pesquisar Cep";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
             this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(26, 10);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(160, 41);
+            this.btnNovo.TabIndex = 19;
+            this.btnNovo.Text = "NOVO";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(585, 10);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(159, 41);
+            this.btnSair.TabIndex = 20;
+            this.btnSair.Text = "SAIR";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // frmPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(847, 487);
+            this.ClientSize = new System.Drawing.Size(767, 491);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tbCep);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbBotoes);
             this.Controls.Add(this.btnLimparFoto);
             this.Controls.Add(this.tbnSelecionaFoto);
             this.Controls.Add(this.pbFoto);
@@ -465,7 +503,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Pessoas";
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pbBotoes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,7 +540,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
         public System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button tbnSelecionaFoto;
         private System.Windows.Forms.Button btnLimparFoto;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pbBotoes;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox tbCep;
         private System.Windows.Forms.Label label15;
@@ -510,5 +548,8 @@ namespace TrilhadeDesenvolvimento.NET.Views
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.OpenFileDialog ofdFoto;
         private System.Windows.Forms.Button btnPesquisarCep;
+        private System.Windows.Forms.Button btnFilhos;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnNovo;
     }
 }

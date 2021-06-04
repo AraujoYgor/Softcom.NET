@@ -22,5 +22,17 @@ namespace TrilhadeDesenvolvimento.NET.Views
             frmPessoas frmPessoas = new frmPessoas();
             frmPessoas.ShowDialog();
         }
+
+        private void fILHOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastrodeFilhos Filhos = new frmCadastrodeFilhos();
+            Filhos.ShowDialog();
+        }
+
+        private void rELATORIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPessoas_Relatorio pessoas_Relatorio = new frmPessoas_Relatorio();
+            pessoas_Relatorio.ShowDialog();
+        }
     }
 }

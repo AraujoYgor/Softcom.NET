@@ -69,11 +69,29 @@
     <Compile Include="Model\CEP.cs" />
     <Compile Include="Model\Pessoas.cs" />
     <Compile Include="Model\Uteis.cs" />
+    <Compile Include="Views\frmCadastrodeFilhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCadastrodeFilhos.Designer.cs">
+      <DependentUpon>frmCadastrodeFilhos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmFilhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmFilhos.Designer.cs">
+      <DependentUpon>frmFilhos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frmPessoas.Designer.cs">
       <DependentUpon>frmPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmPessoas_Relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPessoas_Relatorio.Designer.cs">
+      <DependentUpon>frmPessoas_Relatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -93,8 +111,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\frmCadastrodeFilhos.resx">
+      <DependentUpon>frmCadastrodeFilhos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmFilhos.resx">
+      <DependentUpon>frmFilhos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPessoas.resx">
       <DependentUpon>frmPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPessoas_Relatorio.resx">
+      <DependentUpon>frmPessoas_Relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

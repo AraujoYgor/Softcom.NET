@@ -14,37 +14,17 @@ namespace TrilhadeDesenvolvimento.NET.Views
         string foto = null;
         string pastaDestino = null;
         string destinoCompleto = null; 
-
+        
         public frmPessoas()
         {
             InitializeComponent();
 
         }
 
-        private void tbnSelecionaFoto_Click(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
-            origemCompleto = null;
-            foto = null;
-            pastaDestino = Model.Pessoas.caminhoFotos;
-            destinoCompleto = null;
 
-            if(ofdFoto.ShowDialog() == DialogResult.OK)
-            {
-                origemCompleto = ofdFoto.FileName;
-                foto = ofdFoto.SafeFileName;
-                destinoCompleto = pastaDestino + foto;
-            }
-
-            if(File.Exists(destinoCompleto))
-            {
-                if(MessageBox.Show("O arquivo já existe, deseja substituir?", "Subistituir", MessageBoxButtons.YesNo) == DialogResult.No)
-                {
-                    return;
-                }
-            }
-            pbFoto.ImageLocation = origemCompleto;
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if(destinoCompleto == null)
@@ -107,7 +87,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
                     tbEmail.Clear();
                     tbCPF.Clear();
                     tbSexo.SelectedItem = -1;
-                    //pbFoto.ImageLocation
+                    pbFoto.ImageLocation = null;
                     tbCategoria.SelectedItem = -1;
                     tbSalarioBase.Clear();
                     tbRua.Clear();
@@ -116,7 +96,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
                     tbBairro.Clear();
                     tbCidade.Clear();
                     tbUF.Clear();
-                    //cbFilho.
+                    cbFilho.Checked = false;
                     tbCep.Clear();
 
                 }
@@ -127,27 +107,81 @@ namespace TrilhadeDesenvolvimento.NET.Views
                 
             }
         }
+        private void btnFilhos_Click(object sender, EventArgs e)
+        {
+            frmFilhos filhos = new frmFilhos();
+            filhos.ShowDialog();
+        }
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tbnSelecionaFoto_Click(object sender, EventArgs e)
+        {
+            origemCompleto = null;
+            foto = null;
+            pastaDestino = Model.Pessoas.caminhoFotos;
+            destinoCompleto = null;
+
+            if(ofdFoto.ShowDialog() == DialogResult.OK)
+            {
+                origemCompleto = ofdFoto.FileName;
+                foto = ofdFoto.SafeFileName;
+                destinoCompleto = pastaDestino + foto;
+            }
+
+            if(File.Exists(destinoCompleto))
+            {
+                if(MessageBox.Show("O arquivo já existe, deseja substituir?", "Subistituir", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            pbFoto.ImageLocation = origemCompleto;
+        }
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
             string vCep = tbCep.Text;
-            if(vCep != null)
+
+            if(MessageBox.Show("Deseja pesquisar o CEP na internet?", "Buscar CEP", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if(vCep.Length == 8)
+                if(vCep != null)
                 {
-                    if(Information.IsNumeric(vCep))
+                    if(vCep.Length == 8)
                     {
-                        var vJson = Uteis.BuscarJsonCEP(vCep);
-                        CEP.Unit Cep = new CEP.Unit();
-                        Cep = CEP.DesSerializedClassUnit(vJson);
-                        tbRua.Text = Cep.logradouro;
-                        tbBairro.Text = Cep.bairro;
-                        tbCidade.Text = Cep.localidade;
-                        tbUF.Text = Cep.uf;
-                        tbNumero.Focus();
+                        if(Information.IsNumeric(vCep))
+                        {
+                            var vJson = Uteis.BuscarJsonCEP(vCep);
+                            CEP.Unit Cep = new CEP.Unit();
+                            Cep = CEP.DesSerializedClassUnit(vJson);
+                            tbRua.Text = Cep.logradouro;
+                            tbBairro.Text = Cep.bairro;
+                            tbCidade.Text = Cep.localidade;
+                            tbUF.Text = Cep.uf;
+                            tbNumero.Focus();
+                        }
                     }
                 }
             }
         }
+        private void cbFilho_CheckedChanged(object sender, EventArgs e)
+        {
+            CadastrarFilhos();
+        }
+        private void CadastrarFilhos()
+        {
+            if(cbFilho.Checked == false)
+            {
+                btnFilhos.Enabled = false;
+            }
+            else
+            {
+                btnFilhos.Enabled = true;
+            }
+        }
+
+
     }
 }
 

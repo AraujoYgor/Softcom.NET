@@ -32,10 +32,10 @@ namespace TrilhadeDesenvolvimento.NET.Views
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cADASTROToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rELATORIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bANCODEDADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pESSOASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fILHOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rELATORIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bANCODEDADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,30 +60,32 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.cADASTROToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.cADASTROToolStripMenuItem.Text = "CADASTRO";
             // 
-            // rELATORIOSToolStripMenuItem
-            // 
-            this.rELATORIOSToolStripMenuItem.Name = "rELATORIOSToolStripMenuItem";
-            this.rELATORIOSToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.rELATORIOSToolStripMenuItem.Text = "RELATORIOS";
-            // 
-            // bANCODEDADOSToolStripMenuItem
-            // 
-            this.bANCODEDADOSToolStripMenuItem.Name = "bANCODEDADOSToolStripMenuItem";
-            this.bANCODEDADOSToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
-            this.bANCODEDADOSToolStripMenuItem.Text = "BANCO DE DADOS";
-            // 
             // pESSOASToolStripMenuItem
             // 
             this.pESSOASToolStripMenuItem.Name = "pESSOASToolStripMenuItem";
-            this.pESSOASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pESSOASToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.pESSOASToolStripMenuItem.Text = "PESSOAS";
             this.pESSOASToolStripMenuItem.Click += new System.EventHandler(this.pESSOASToolStripMenuItem_Click);
             // 
             // fILHOSToolStripMenuItem
             // 
             this.fILHOSToolStripMenuItem.Name = "fILHOSToolStripMenuItem";
-            this.fILHOSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fILHOSToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.fILHOSToolStripMenuItem.Text = "FILHOS";
+            this.fILHOSToolStripMenuItem.Click += new System.EventHandler(this.fILHOSToolStripMenuItem_Click);
+            // 
+            // rELATORIOSToolStripMenuItem
+            // 
+            this.rELATORIOSToolStripMenuItem.Name = "rELATORIOSToolStripMenuItem";
+            this.rELATORIOSToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.rELATORIOSToolStripMenuItem.Text = "RELATORIOS";
+            this.rELATORIOSToolStripMenuItem.Click += new System.EventHandler(this.rELATORIOSToolStripMenuItem_Click);
+            // 
+            // bANCODEDADOSToolStripMenuItem
+            // 
+            this.bANCODEDADOSToolStripMenuItem.Name = "bANCODEDADOSToolStripMenuItem";
+            this.bANCODEDADOSToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.bANCODEDADOSToolStripMenuItem.Text = "BANCO DE DADOS";
             // 
             // frmPrincipal
             // 
