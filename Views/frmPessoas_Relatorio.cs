@@ -47,6 +47,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
         private void frmPessoas_Relatorio_Load(object sender, EventArgs e)
         {
             ListaPessaoas();
+            
         }
     }
 }

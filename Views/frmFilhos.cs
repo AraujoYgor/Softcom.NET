@@ -17,7 +17,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
         public frmFilhos()
         {
             InitializeComponent();
-            BuscarPais();
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -32,13 +32,13 @@ namespace TrilhadeDesenvolvimento.NET.Views
                 using(SqlConnection cn = new SqlConnection(Banco.IniciarConexao))
                 {
                     cn.Open();
-                    var sql = "SELECT Nome FROM tb_Pessoas WHERE Filho ="+ 1;
+                    var sql = "SELECT Nome as 'Pais/Mãe' FROM tb_Pessoas WHERE Filho=1 ";
                     using(SqlDataAdapter da = new SqlDataAdapter(sql, cn))
                     {
                         using(DataTable dt = new DataTable())
                         {
                             da.Fill(dt);
-                            cbPais.DataSource = dt;
+                            dgvPaisComFilhos.DataSource = dt;
 
                         }
                     }
@@ -48,6 +48,12 @@ namespace TrilhadeDesenvolvimento.NET.Views
             {
 
             }
+        }
+
+        private void frmFilhos_Load(object sender, EventArgs e)
+        {
+            BuscarPais();
+            dgvPaisComFilhos.Columns[0].Width = 180;
         }
     }
 }
