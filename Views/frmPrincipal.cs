@@ -34,5 +34,6 @@ namespace TrilhadeDesenvolvimento.NET.Views
             frmPessoas_Relatorio pessoas_Relatorio = new frmPessoas_Relatorio();
             pessoas_Relatorio.ShowDialog();
         }
+
     }
 }

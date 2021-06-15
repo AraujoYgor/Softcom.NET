@@ -44,7 +44,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
                     }
                 }
             }
-            catch(Exception ex)
+            finally
             {
 
             }
