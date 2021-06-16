@@ -62,54 +62,72 @@ namespace TrilhadeDesenvolvimento.NET.Views
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            if((tbNome.Text != null) && (tbCPF.Text == null))
+            try
             {
-                try
+                using(SqlConnection cn = new SqlConnection(Banco.IniciarConexao))
                 {
-                    using(SqlConnection cn = new SqlConnection(Banco.IniciarConexao))
-                    {
-                        cn.Open();
-                        var sql = "SELECT Codigo, Nome, Sobrenome, Email, CPF, Sexo, Categoria, SalarioBase, CEP, Filho FROM tb_Pessoas WHERE Nome like '%" + tbNome.Text + "%' ";
-                        using(SqlDataAdapter da = new SqlDataAdapter(sql, cn))
-                        {
-                            using(DataTable dt = new DataTable())
-                            {
-                                da.Fill(dt);
-                                dgvPessoas.DataSource = dt;
+                    bool filho = false;
+                    cn.Open();
+                    var sql = "SELECT Codigo, Nome, Sobrenome, Email, CPF, Sexo, Categoria, SalarioBase, CEP, Filho FROM tb_Pessoas ";
 
-                            }
+                        switch(cbxPesquisa.Text)
+                    {
+                        case "NOME":
+                            sql += "WHERE Nome like '%" + tbBuscado.Text + "%' ";
+                        break;
+
+                        case "SOBRENOME":
+                            sql += "WHERE Sobrenome like '%" + tbBuscado.Text + "%' ";
+                        break;
+
+                        case "CPF":
+                            sql += "WHERE CPF like '%" + tbBuscado.Text + "%' ";
+                        break;
+
+
+                    }
+                    if(cbxFilhos.Text == "SIM")
+                    {
+                        filho = true;
+                        sql += "and Filho = 1";
+
+                    }
+                    else
+                    {
+                        filho = false;
+                        sql += "and Filho = 0";
+                    }
+                    using(SqlDataAdapter da = new SqlDataAdapter(sql, cn))
+                    {
+                        using(DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvPessoas.DataSource = dt;
                         }
                     }
                 }
-                finally
-                {
-
-                }
             }
-            else if((tbNome.Text == null) && (tbCPF.Text != null))
+            catch (Exception ex)
             {
-                try
-                {
-                    using(SqlConnection cn = new SqlConnection(Banco.IniciarConexao))
-                    {
-                        cn.Open();
-                        var sql = "SELECT Codigo, Nome, Sobrenome, Email, CPF, Sexo, Categoria, SalarioBase, CEP, Filho FROM tb_Pessoas WHERE CPF="+ tbCPF.Text;
-                        using(SqlDataAdapter da = new SqlDataAdapter(sql, cn))
-                        {
-                            using(DataTable dt = new DataTable())
-                            {
-                                da.Fill(dt);
-                                dgvPessoas.DataSource = dt;
-
-                            }
-                        }
-                    }
-                }
-                finally
-                {
-
-                }
+                MessageBox.Show("Impossivel consultar sem dados" + ex.Message);
             }
+        }
+
+        private void btnLimparFiltros_Click(object sender, EventArgs e)
+        {
+            cbxPesquisa.SelectedIndex = -1;
+            cbxFilhos.SelectedIndex = -1;
+            tbBuscado.Text = "";
+            rbFiltrosAvancados.Checked = false;
+            
+            ListaPessaoas();
+        }
+
+        private void rbFiltrosAvancados_CheckedChanged(object sender, EventArgs e)
+        {
+            cbxCategoria.Enabled = true;
+            cbxSexo.Enabled = true;
+            cbxFilhos.Enabled = true;
         }
     }
 }
