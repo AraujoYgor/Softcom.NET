@@ -83,8 +83,6 @@ namespace TrilhadeDesenvolvimento.NET.Views
                         case "CPF":
                             sql += "WHERE CPF like '%" + tbBuscado.Text + "%' ";
                         break;
-
-
                     }
                     if(cbxFilhos.Text == "SIM")
                     {

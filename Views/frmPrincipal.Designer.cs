@@ -36,6 +36,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.fILHOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rELATORIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bANCODEDADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sALARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +45,8 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cADASTROToolStripMenuItem,
             this.rELATORIOSToolStripMenuItem,
-            this.bANCODEDADOSToolStripMenuItem});
+            this.bANCODEDADOSToolStripMenuItem,
+            this.sALARIOSToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(984, 24);
@@ -87,6 +89,13 @@ namespace TrilhadeDesenvolvimento.NET.Views
             this.bANCODEDADOSToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.bANCODEDADOSToolStripMenuItem.Text = "BANCO DE DADOS";
             // 
+            // sALARIOSToolStripMenuItem
+            // 
+            this.sALARIOSToolStripMenuItem.Name = "sALARIOSToolStripMenuItem";
+            this.sALARIOSToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.sALARIOSToolStripMenuItem.Text = "SALARIOS";
+            this.sALARIOSToolStripMenuItem.Click += new System.EventHandler(this.sALARIOSToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -119,6 +128,7 @@ namespace TrilhadeDesenvolvimento.NET.Views
         private System.Windows.Forms.ToolStripMenuItem bANCODEDADOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pESSOASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fILHOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sALARIOSToolStripMenuItem;
     }
 }
 

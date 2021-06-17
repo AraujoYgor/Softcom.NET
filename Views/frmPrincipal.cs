@@ -35,5 +35,10 @@ namespace TrilhadeDesenvolvimento.NET.Views
             pessoas_Relatorio.ShowDialog();
         }
 
+        private void sALARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalarios salarios = new frmSalarios();
+            salarios.ShowDialog();
+        }
     }
 }
